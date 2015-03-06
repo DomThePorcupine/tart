@@ -1,0 +1,44 @@
+#! /bin/bash
+#First check if the tar program is installed
+
+#We need to check to make sure a file was passed as an argument
+if [[  "$1" == "" ]];then
+	echo "------------WARNING!------------"
+	echo "You have not entered a filename!"
+	echo "---Usage is 'tart file.tar.*'---"
+	echo "--------------------=-----------" 
+	exit
+fi
+
+#Check to make sure the file exists in the directory
+if [[ ! -e $1 ]];then
+	echo "------------------WARNING------------------"
+	echo "It appears that the file does not exist :'("
+	echo "----------------Now exiting----------------"
+	echo "-------------------------------------------"
+	exit
+fi
+#If the entered file is a tar.gz we extract it
+if [[ "$1" == *".gz"* ]];then
+	tar -zxvf $1
+	echo "All done :)"
+	exit
+fi
+#If the entered file is a tar.xz we extract it
+if [[ "$1" == *".xz"* ]];then
+	tar -xvf $1
+	echo "All done :)"
+	exit
+fi
+#If the entered file is a tar.bz2 we extract it
+if [[ "$1" == *".bz2"* ]];then
+	tar -jxvf $1
+	echo "All done :)"
+	exit
+fi
+
+#If the file is not a gz xz or bz2 tell the user
+echo "-----------------WARNING!-----------------"
+echo "The file you have entered is not a tarball"
+echo "----I cannot extract a non tar file :(----"
+echo "------------------------------------------"
