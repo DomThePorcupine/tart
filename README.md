@@ -21,11 +21,11 @@ tart myfile.tar.xz/gz/bz2
 To install this tool copy it to a folder in your path,
 and then make it executable
 
-#Tells you your path directories
+Use this to tell you your path directories
 echo $PATH
-#choose one of the above directories and use cp
+Choose one of the above directories and use cp
 sudo cp tart /usr/bin
-#make it an executable file
+Make it an executable file
 sudo chmod +x /usr/bin/tart
 
 Yay now you have tart and can be lazy like me :)
