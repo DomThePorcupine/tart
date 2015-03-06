@@ -9,10 +9,15 @@ basically only use tar to extract files.
 Here is how it works:
 
 What you type with tar:
+
 tar -zx(v)f myfile.tar.gz
+
 tar -x(v)f myfile.tar.xz
+
 tar -jx(v)f myfile.tar.bz2
+
 becomes
+
 tart myfile.tar.xz/gz/bz2
 
 ------------------------------------------------------
