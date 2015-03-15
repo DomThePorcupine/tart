@@ -6,7 +6,7 @@ if [[  "$1" == "" ]];then
 	echo "------------WARNING!------------"
 	echo "You have not entered a filename!"
 	echo "---Usage is 'tart file.tar.*'---"
-	echo "--------------------=-----------" 
+	echo "--------------------------------" 
 	exit
 fi
 
@@ -21,18 +21,21 @@ fi
 #If the entered file is a tar.gz we extract it
 if [[ "$1" == *".gz"* ]];then
 	tar -zxvf $1
+	rm -rf $1
 	echo "All done :)"
 	exit
 fi
 #If the entered file is a tar.xz we extract it
 if [[ "$1" == *".xz"* ]];then
 	tar -xvf $1
+	rm -rf $1
 	echo "All done :)"
 	exit
 fi
 #If the entered file is a tar.bz2 we extract it
 if [[ "$1" == *".bz2"* ]];then
 	tar -jxvf $1
+	rm -rf $1
 	echo "All done :)"
 	exit
 fi
