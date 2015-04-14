@@ -2,8 +2,7 @@ This is a simple, and fairly useless wrapper tool for tar. I got tired of
 always typing a bunch of switches, and felt it would be easier without them since I 
 basically only use tar to extract files.
 
-WARNING tart defaults to removing the tar.* file after 
-it is extracted!!!!
+WARNING tart defaults to removing the tar.* file after it is extracted!!!!
 ------------------------------------------------------
 -------------------------USAGE------------------------
 ------------------------------------------------------
