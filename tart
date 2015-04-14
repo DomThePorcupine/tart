@@ -26,7 +26,7 @@ if [[ "$1" == *".gz"* ]];then
 	exit
 fi
 #If the entered file is a tar.xz we extract it
-if [[ "$1" == *".xz"* ]];then
+if [[ "$1" == *".xz"* ] || [ "$1" == *".tar"* ]];then
 	tar -xvf $1
 	rm -rf $1
 	echo "All done :)"
@@ -39,7 +39,12 @@ if [[ "$1" == *".bz2"* ]];then
 	echo "All done :)"
 	exit
 fi
-
+if [[ "$1" == *".zip"* ]];then
+	unzip $1
+	rm -rf $1
+	echo "All done :)"
+	exit
+fi
 #If the file is not a gz xz or bz2 tell the user
 echo "-----------------WARNING!-----------------"
 echo "The file you have entered is not a tarball"
