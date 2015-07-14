@@ -26,7 +26,7 @@ if [[ "$1" == *".gz"* ]];then
 	exit
 fi
 #If the entered file is a tar.xz we extract it
-if [[ "$1" == *".xz"* ] || [ "$1" == *".tar"* ]];then
+if [ "$1" == *".xz"* ] || [ "$1" == *".tar"* ] ; then
 	tar -xvf $1
 	rm -rf $1
 	echo "All done :)"
